@@ -15,7 +15,6 @@ public class App {
         String model = sc.nextLine();
 
         Car car = new Car();
-
         car.setBrand(brand);
         car.setModel(model);
 
@@ -40,35 +39,31 @@ public class App {
 
                 case 2:
                     System.out.print("Anna uusi auton merkki: ");
-                    String newBrand = sc.nextLine();
+                    car.setBrand(sc.nextLine());
 
                     System.out.print("Anna uusi auton malli: ");
-                    String newModel = sc.nextLine();
-
-                    car.setBrand(newBrand);
-                    car.setModel(newModel);
+                    car.setModel(sc.nextLine());
                     break;
 
                 case 3:
                     System.out.print("Kuinka monta km/h haluat kiihdyttää? ");
-                    int accel = Integer.parseInt(sc.nextLine());
+                    int accelerate = Integer.parseInt(sc.nextLine());
 
-                    if (accel < 0) {
-                        System.out.println(
-                                "Nopeuden täytyy olla positiivinen luku.");
+                    if (accelerate < 0) {
+                        System.out.println("Nopeuden täytyy olla positiivinen luku.");
                     } else {
-                        car.accelerate(accel);
+                        car.accelerate(accelerate);
                     }
                     break;
 
                 case 4:
                     System.out.print("Kuinka monta km/h haluat hidastaa? ");
-                    int decel = Integer.parseInt(sc.nextLine());
+                    int decelerate = Integer.parseInt(sc.nextLine());
 
-                    if (decel < 0) {
-                        System.out.println( "Nopeuden täytyy olla positiivinen luku.");
+                    if (decelerate < 0) {
+                        System.out.println("Nopeuden täytyy olla positiivinen luku.");
                     } else {
-                        car.decelerate(decel);
+                        car.decelerate(decelerate);
                     }
                     break;
 

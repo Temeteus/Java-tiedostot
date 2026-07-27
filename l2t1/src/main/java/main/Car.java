@@ -12,6 +12,24 @@ public class Car {
         speed = 0;
     }
 
+    public Car(String brand, String model, int speed) {
+        this.brand = brand;
+        this.model = model;
+        this.speed = speed;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
     public void setBrand(String brand) {
         this.brand = brand;
     }
@@ -21,21 +39,23 @@ public class Car {
     }
 
     public void accelerate(int amount) {
-        speed += amount;
+        if (amount >= 0) {
+            speed += amount;
+        }
     }
 
     public void decelerate(int amount) {
-        speed -= amount;
+        if (amount >= 0) {
+            speed -= amount;
 
-        if (speed < 0) {
-            speed = 0;
+            if (speed < 0) {
+                speed = 0;
+            }
         }
     }
 
     public void status() {
-        System.out.println(
-            "Auto: " + brand + " " + model +
-            ", Nopeus: " + speed + " km/h"
-        );
+        System.out.println("Auto: " + brand + " " + model
+                + ", Nopeus: " + speed + " km/h");
     }
 }
