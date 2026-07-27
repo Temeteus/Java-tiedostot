@@ -14,7 +14,10 @@ public class App {
         System.out.print("Anna auton malli: ");
         String model = sc.nextLine();
 
-        Car car = new Car(brand, model);
+        Car car = new Car();
+
+        car.setBrand(brand);
+        car.setModel(model);
 
         int choice;
 
@@ -42,7 +45,8 @@ public class App {
                     System.out.print("Anna uusi auton malli: ");
                     String newModel = sc.nextLine();
 
-                    car.setCar(newBrand, newModel);
+                    car.setBrand(newBrand);
+                    car.setModel(newModel);
                     break;
 
                 case 3:

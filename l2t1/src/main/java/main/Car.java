@@ -6,14 +6,17 @@ public class Car {
     private String model;
     private int speed;
 
-    public Car(String brand, String model) {
-        this.brand = brand;
-        this.model = model;
-        this.speed = 0;
+    public Car() {
+        brand = "";
+        model = "";
+        speed = 0;
     }
 
-    public void setCar(String brand, String model) {
+    public void setBrand(String brand) {
         this.brand = brand;
+    }
+
+    public void setModel(String model) {
         this.model = model;
     }
 
