@@ -22,7 +22,6 @@ public class App {
 
         do {
 
-            System.out.println();
             System.out.println("1) Näytä auton tila");
             System.out.println("2) Muokkaa auton merkkiä ja mallia");
             System.out.println("3) Kiihdytä autoa");
