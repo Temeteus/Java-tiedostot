@@ -47,6 +47,7 @@ public class App {
 
                 case 3:
                     System.out.println("Valitse hirviö, johon hyökätä:");
+                    cave.listMonsters();
                     int index = Integer.parseInt(sc.nextLine());
 
                     cave.attackMonster(index - 1);
@@ -88,7 +89,7 @@ public class App {
                     break;
 
                 case 0:
-                    System.out.println("Peli päättyi. Kiitos pelaamisesta!");
+                    System.out.println("Peli päättyy. Kiitos pelaamisesta!");
                     sc.close();
                     return;
             }

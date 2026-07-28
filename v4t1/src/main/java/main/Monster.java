@@ -22,6 +22,7 @@ public class Monster implements Serializable {
         health -= dmg;
 
         if (health <= 0) {
+            System.out.println(type + " on kuollut!");
             return true;
         }
 
