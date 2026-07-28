@@ -46,9 +46,8 @@ public class App {
 
                 case 3:
                     System.out.println("Valitse hirviö, johon hyökätä:");
-                    cave.listMonsters();
+                    cave.printMonsters();
                     int index = Integer.parseInt(sc.nextLine());
-
                     cave.attackMonster(index - 1);
                     break;
 
