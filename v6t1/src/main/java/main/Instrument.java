@@ -11,6 +11,6 @@ public class Instrument {
     }
 
     public String getDetails() {
-        return "Valmistaja: " + manufacturer + ", Hinta: " + price + "€";
+        return "Valmistaja: " + manufacturer + ", Hinta: " + price + "e";
     }
 }
