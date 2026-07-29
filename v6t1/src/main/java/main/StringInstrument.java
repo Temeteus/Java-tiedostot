@@ -11,7 +11,7 @@ public class StringInstrument extends Instrument {
 
     public void tune() {
         System.out.println(
-            manufacturer + " soitinta viritettiin "
+            manufacturer + " soittimesta viritettiin "
             + numberOfStrings + " kieltä!"
         );
     }
