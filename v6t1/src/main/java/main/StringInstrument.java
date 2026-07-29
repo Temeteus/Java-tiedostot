@@ -1,7 +1,8 @@
 package main;
 
 public class StringInstrument extends Instrument {
-    private int numberOfStrings;
+
+    protected int numberOfStrings;
 
     public StringInstrument(String manufacturer, int price, int numberOfStrings) {
         super(manufacturer, price);
@@ -9,9 +10,9 @@ public class StringInstrument extends Instrument {
     }
 
     public void tune() {
-        System.out.println(getManufacturer()
-                + " soitinta viritettiin "
-                + numberOfStrings
-                + " kieltä!");
+        System.out.println(
+            manufacturer + " soitinta viritettiin "
+            + numberOfStrings + " kieltä!"
+        );
     }
 }
