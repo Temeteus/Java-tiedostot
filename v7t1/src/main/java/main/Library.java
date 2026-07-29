@@ -19,21 +19,25 @@ public class Library {
     }
 
     public void listBooks() {
-        int totalBooks = 0;
+        int totalCopies = 0;
 
         for (Book book : books) {
             book.displayInfo();
             System.out.println("Kirjan kategoria: " + book.categorize());
 
-            totalBooks += book.getCopies();
+            totalCopies += book.getCopies();
         }
 
-        System.out.println("Kirjojen määrä kirjastossa on: " + totalBooks);
+        System.out.println("Kirjojen määrä kirjastossa on: " + totalCopies);
     }
 
     public void borrowBook(String title) {
+
         for (Book book : books) {
-            if (book.getTitle().equals(title) && book instanceof Borrowable) {
+
+            if (book.getTitle().equals(title)
+                    && book instanceof Borrowable) {
+
                 ((Borrowable) book).borrow();
                 return;
             }
@@ -43,8 +47,12 @@ public class Library {
     }
 
     public void returnBook(String title) {
+
         for (Book book : books) {
-            if (book.getTitle().equals(title) && book instanceof Borrowable) {
+
+            if (book.getTitle().equals(title)
+                    && book instanceof Borrowable) {
+
                 ((Borrowable) book).returnBook();
                 return;
             }

@@ -1,6 +1,7 @@
 package main;
 
 public abstract class Book {
+
     protected String title;
     protected String author;
     protected int pages;
@@ -16,8 +17,11 @@ public abstract class Book {
     public abstract String categorize();
 
     public void displayInfo() {
-        System.out.println("Nimi: " + title + ", Kirjailija: " + author
-                + ", Sivut: " + pages + ", Määrä: " + copies);
+        System.out.println(
+                "Nimi: " + title +
+                ", Kirjailija: " + author +
+                ", Sivut: " + pages +
+                ", Määrä: " + copies);
     }
 
     public String getTitle() {
